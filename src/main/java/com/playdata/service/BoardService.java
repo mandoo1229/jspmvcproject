@@ -17,4 +17,9 @@ public class BoardService {
         BoardDao boardDao = new BoardDao();
         return boardDao.selectAll(req);
     }
+
+    public BoardDto getBoard(String id, HttpServletRequest req) {
+        BoardDao boardDao = new BoardDao();
+        return boardDao.selectByid(id, req);
+    }
 }
